@@ -8,7 +8,7 @@ pipeline {
           steps{
         withCodeQL(codeql:'codeql') {
             withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
-    //// some block 
+    ///// some block 
             sh 'ls -la'
           //  sh 'codeql --version'
           //  sh 'codeql database create dvna --language=javascript --overwrite'
