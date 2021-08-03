@@ -13,7 +13,7 @@ pipeline {
             sh 'codeql --version'
             sh 'codeql database create dvna --language=javascript --overwrite'
           //sh 'codeql database analyze dvna javascript-code-scanning.qls --sarif-category=javascript --format=sarif-latest --output=dvna.sarif'
-            sh 'codeql database analyze dvna javascript-code-scanning.qls --sarif-category=javascript --format=csv'    
+            sh 'codeql database analyze dvna javascript-code-scanning.qls --sarif-category=javascript --format=csv --output=dvna.csv'
                 //using the rules installed, analyse the goof app to see results and output in SARIF
             sh 'ls -la'
           //  sh 'cat /var/jenkins_home/workspace/dvna/dvna.sarif'
